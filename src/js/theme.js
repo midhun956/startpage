@@ -38,7 +38,7 @@ const colorSets = [
 function preloadImages() {
   for (let i = 0; i < images.length; i++) {
     const img = new Image();
-    img.src = "../src/images/" + images[i];
+    img.src = "./src/images/" + images[i];
   }
 }
 
@@ -50,7 +50,7 @@ function nextImage() {
   updateColors(currentIndex);
 
   setTimeout(() => {
-    imageElement.src = "../src/images/" + images[currentIndex];
+    imageElement.src = "./src/images/" + images[currentIndex];
     imageElement.style.opacity = 1;
   }, 200); // Match the transition duration in style.css
 }
@@ -68,7 +68,7 @@ updateColors(currentIndex);
 
 // Set the initial image
 document.getElementById("carouselImage").src =
-  "../src/images/" + images[currentIndex];
+  "./src/images/" + images[currentIndex];
 
 // Image is opacity 0 and text is translated off screen by default
 // Add the loaded class to the image and text to animate them in
