@@ -110,7 +110,9 @@ body {
 #links {
   display: grid;
   grid-row-gap: 0.5em;
-  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1.5em;
+  grid-template-columns: repeat(2, max-content);
+  align-items: start;
 }
 
 ul {
