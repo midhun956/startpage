@@ -125,11 +125,21 @@ a {
   color: var(--text-color);
   font-size: 1.2em;
   text-decoration: none;
+  display: inline-block;
+  transition: transform 180ms cubic-bezier(.2,.9,.2,1), color 160ms ease-in-out;
+  transform-origin: left center;
 }
 
 a:hover {
   color: var(--hover-color);
-  font-style: italic;
+  transform: scale(1.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a {
+    transition: none;
+    transform: none;
+  }
 }
 
 .fazzi .urls:nth-child(even) {
